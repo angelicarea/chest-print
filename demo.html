@@ -1,0 +1,19 @@
+<html>
+<meta charset="utf-8" />
+<script src="chest-print/jquery-1.11.0.min.js"></script>
+<script src="chest-print/jquery.swfobject.1-1-1.min.js"></script>
+<script src="chest-print/print.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#printAll").printAll();
+});
+function btnClick(){
+
+	var str ='[{"width":"900","height":"600","frontSize":"12","content":[{"left":"343","top":"345","name":"shipName","value":"收货人小凳子","width":"130"},{"left":"126","top":"373","name":"shipAddress","value":"山东省 临沂市 费县 世茂大道","width":"309"},{"left":"142","top":"308","name":"shipZip","value":"150000","width":"130"},{"left":"219","top":"434","name":"shipMobile","value":"13569696969","width":"179"},{"left":"358","top":"164","name":"deliverUserName","value":"王二虎","width":"134"},{"left":"127","top":"192","name":"deliverAddress","value":"辽宁省 沈阳市市辖区 淮海路","width":"253"},{"left":"136","top":"131","name":"deliverZip","value":"1456253","width":"161"},{"left":"210","top":"258","name":"deliverMobile","value":"15369554687","width":"153"}]}]';
+	$("#printAll").printAll.print(str);
+}
+
+</script>
+<div id="printAll"></div>
+<input type="button" onclick="btnClick();" value="打印快递单"/>
+</html>
