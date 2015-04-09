@@ -82,7 +82,10 @@ var pages = [
 ```
   $("#printAll").printAll.print(pages);
 ```
-
+##注意事项
+1. 首先要注意flash安全沙箱问题,请在测试环境下测试(ip或域名),文件结构会报错.
+2. 同样是flex问题,需要弹出打印设置系统设置,并不能直接打印(安全相关).
+3. chrome浏览器flash插件有2个,需要禁用自带flash插件,否则打印不出内容.
 
    [jQuery]: http://jquery.com/
    [swfobject]: http://jquery.thewikies.com/swfobject/
