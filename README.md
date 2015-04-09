@@ -3,13 +3,14 @@
 这个插件,适用于针式打印机等需要定位打印的需求,如本人使用场景是打印快递单.
 ##如何使用
 插件主体是as3编写的swf文件,扩充部分写了一个jQuery小插件,所以需要引入[jQuery][] 包,[swfobject][]包.  
+
 1. 创建一个空DIV并创建jQuery对象:
 ```
   $("#printAll").printAll();
 ```
-2. 需要一个JSON数组参数,数组中的对象为多Page打印,一个对象代表一个Page;  
-Page对象中,存在width,height,frontSize(拼写错误,囧),content属性;  
-Page对象中的Content属性是一个打印元素对象数组,元素对象又有left,top,name(打印无效属性,后台对象转化过来的属性),value(打印内容),width属性.例子如下,这是打印一页快递单:  
+2. 需要一个JSON数组参数,数组中的对象为多Page打印,一个对象代表一个Page;
+Page对象中,存在width,height,frontSize(拼写错误,囧),content属性;
+Page对象中的Content属性是一个打印元素对象数组,元素对象又有left,top,name(打印无效属性,后台对象转化过来的属性),value(打印内容),width属性.例子如下,这是打印一页快递单:
 ```
         [
             {
