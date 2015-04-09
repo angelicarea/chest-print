@@ -12,71 +12,77 @@
 Page对象中,存在width,height,frontSize(拼写错误,囧),content属性;
 Page对象中的Content属性是一个打印元素对象数组,元素对象又有left,top,name(打印无效属性,后台对象转化过来的属性),value(打印内容),width属性.例子如下,这是打印一页快递单:
 ```
-        [
-            {
-                "width": "900",
-                "height": "600",
-                "frontSize": "12",
-                "content": [
-                    {
-                        "left": "343",
-                        "top": "345",
-                        "name": "shipName",
-                        "value": "收货人小凳子",
-                        "width": "130"
-                    },
-                    {
-                        "left": "126",
-                        "top": "373",
-                        "name": "shipAddress",
-                        "value": "山东省 临沂市 费县 世茂大道",
-                        "width": "309"
-                    },
-                    {
-                        "left": "142",
-                        "top": "308",
-                        "name": "shipZip",
-                        "value": "150000",
-                        "width": "130"
-                    },
-                    {
-                        "left": "219",
-                        "top": "434",
-                        "name": "shipMobile",
-                        "value": "13569696969",
-                        "width": "179"
-                    },
-                    {
-                        "left": "358",
-                        "top": "164",
-                        "name": "deliverUserName",
-                        "value": "王二虎",
-                        "width": "134"
-                    },
-                    {
-                        "left": "127",
-                        "top": "192",
-                        "name": "deliverAddress",
-                        "value": "辽宁省 沈阳市市辖区 淮海路",
-                        "width": "253"
-                    },
-                    {
-                        "left": "136",
-                        "top": "131",
-                        "name": "deliverZip",
-                        "value": "1456253",
-                        "width": "161"
-                    },
-                    {
-                        "left": "210",
-                        "top": "258",
-                        "name": "deliverMobile",
-                        "value": "15369554687",
-                        "width": "153"
-                    }
-                ]
-            }
-        ]
-``` 
+var pages = [
+              {
+                  "width": "900",
+                  "height": "600",
+                  "frontSize": "12",
+                  "content": [
+                      {
+                          "left": "343",
+                          "top": "345",
+                          "name": "shipName",
+                          "value": "收货人小凳子",
+                          "width": "130"
+                      },
+                      {
+                          "left": "126",
+                          "top": "373",
+                          "name": "shipAddress",
+                          "value": "山东省 临沂市 费县 世茂大道",
+                          "width": "309"
+                      },
+                      {
+                          "left": "142",
+                          "top": "308",
+                          "name": "shipZip",
+                          "value": "150000",
+                          "width": "130"
+                      },
+                      {
+                          "left": "219",
+                          "top": "434",
+                          "name": "shipMobile",
+                          "value": "13569696969",
+                          "width": "179"
+                      },
+                      {
+                          "left": "358",
+                          "top": "164",
+                          "name": "deliverUserName",
+                          "value": "王二虎",
+                          "width": "134"
+                      },
+                      {
+                          "left": "127",
+                          "top": "192",
+                          "name": "deliverAddress",
+                          "value": "辽宁省 沈阳市市辖区 淮海路",
+                          "width": "253"
+                      },
+                      {
+                          "left": "136",
+                          "top": "131",
+                          "name": "deliverZip",
+                          "value": "1456253",
+                          "width": "161"
+                      },
+                      {
+                          "left": "210",
+                          "top": "258",
+                          "name": "deliverMobile",
+                          "value": "15369554687",
+                          "width": "153"
+                      }
+                  ]
+              }
+          ]
+```
+- 调用打印方法,弹出打印设置,进行打印
+```
+  $("#printAll").printAll.print(pages);
+```
+
+
    [jQuery]: http://jquery.com/
    [swfobject]: http://jquery.thewikies.com/swfobject/
